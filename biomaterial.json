@@ -1,81 +1,85 @@
 {
-    "core": {
-        "type": "sample_bundle", 
-        "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample_bundle.json", 
-        "schema_version": "4.6.1"
-    }, 
-    "samples": [
-        {
-            "content": {
-                "core": {
-                    "type": "sample", 
-                    "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample.json", 
-                    "schema_version": "4.6.1"
-                }, 
-                "name": "Q4_DEMO-Single cell mRNA-seq_MGH30_A01", 
-                "specimen_from_organism": {
-                    "body_part": {
-                        "text": "glioblastoma"
-                    }, 
-                    "organ": {
-                        "text": "brain"
-                    }
-                }, 
-                "ncbi_taxon_id": 9606, 
-                "derived_from": "Q4_DEMO-donor_MGH30", 
-                "sample_id": "Q4_DEMO-sample_SAMN02797092"
-            }, 
-            "derivation_protocols": [
-                {
-                    "pdf": "Q4_DEMO-protocol.pdf", 
-                    "protocol_id": "Q4_DEMO-protocol", 
-                    "type": {
-                        "text": "single cell sequencing"
-                    }, 
-                    "core": {
-                        "type": "protocol", 
-                        "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/protocol.json", 
-                        "schema_version": "4.6.1"
-                    }
-                }
-            ], 
-            "hca_ingest": {
-                "accession": "", 
-                "submissionDate": "2018-03-02T04:26:11.121Z", 
-                "lastModifiedUser": "anonymousUser", 
-                "updateDate": "2018-03-02T04:26:21.633Z", 
-                "document_id": "dcb345ae-e42f-4586-9a52-13b103a06362", 
-                "user": "anonymousUser"
-            }, 
-            "derived_from": "a68c09af-7b19-4fac-a27a-e03411e87bd3"
-        }, 
-        {
-            "content": {
-                "core": {
-                    "type": "sample", 
-                    "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample.json", 
-                    "schema_version": "4.6.1"
-                }, 
-                "name": "Q4 DEMO donor MGH30", 
-                "genus_species": {
-                    "text": "Homo sapiens", 
-                    "ontology": "NCBITaxon:9606"
-                }, 
-                "ncbi_taxon_id": 9606, 
-                "sample_id": "Q4_DEMO-donor_MGH30", 
-                "donor": {
-                    "is_living": true
-                }
-            }, 
-            "derivation_protocols": [], 
-            "hca_ingest": {
-                "accession": "", 
-                "submissionDate": "2018-03-02T04:26:11.095Z", 
-                "lastModifiedUser": "anonymousUser", 
-                "updateDate": "2018-03-02T04:26:21.633Z", 
-                "document_id": "a68c09af-7b19-4fac-a27a-e03411e87bd3", 
-                "user": "anonymousUser"
-            }
-        }
-    ]
+  "describedBy": "https://schema.humancellatlas.org/bundle/5.0.0/biomaterial",
+  "schema_version": "5.0.0",
+  "schema_type": "biomaterial_bundle",
+  "biomaterials": [
+    {
+      "content": {
+        "describedBy": "https://schema.humancellatlas.org/type/biomaterial/5.0.0/donor_organism",
+        "schema_version": "5.0.0",
+        "schema_type": "biomaterial",
+        "biomaterial_core": {
+          "biomaterial_id": "Q4_DEMO-donor_MGH30",
+          "biomaterial_name": "Q4 DEMO donor MGH30",
+          "ncbi_taxon_id": [
+            9606
+          ],
+          "describedBy": "https://schema.humancellatlas.org/core/biomaterial/5.0.0/biomaterial_core",
+          "schema_version": "5.0.0"
+        },
+        "genus_species": [{
+          "describedBy": "https://schema.humancellatlas.org/module/ontology/5.0.0/species_ontology",
+          "text": "Homo sapiens"
+        }],
+        "is_living": true,
+        "biological_sex": "unknown"
+      },
+      "hca_ingest": {
+        "describedBy": "https://schema.humancellatlas.org/bundle/5.0.0/ingest_audit",
+        "document_id": "5dbb7aaf-29ec-47c9-8f6c-f1568cddbdfb",
+        "submissionDate": "2018-02-07T10:21:43.228Z",
+        "updateDate": "2018-02-07T10:21:54.398Z",
+        "submitter_id": "anonymousUser",
+        "updater_id": "anonymousUser"
+      }
+    },
+    {
+      "content": {
+        "describedBy": "https://schema.humancellatlas.org/type/biomaterial/5.0.0/specimen_from_organism",
+        "schema_version": "5.0.0",
+        "schema_type": "biomaterial",
+        "biomaterial_core": {
+          "biomaterial_id": "Q4_DEMO-sample_SAMN02797092",
+          "biomaterial_name": "Q4_DEMO-Single cell mRNA-seq_MGH30_A01",
+          "ncbi_taxon_id": [
+            9606
+          ],
+          "has_input_biomaterial": "Q4_DEMO-donor_MGH30",
+          "supplementary_files": [
+            "Q4_DEMO-protocol"
+          ],
+          "describedBy": "https://schema.humancellatlas.org/core/biomaterial/5.0.0/biomaterial_core",
+          "schema_version": "5.0.0"
+        },
+        "genus_species": [
+          {
+            "describedBy": "https://schema.humancellatlas.org/module/ontology/5.0.0/species_ontology",
+            "text": "Homo sapiens"
+          }
+        ],
+        "organ": {
+          "describedBy": "https://schema.humancellatlas.org/module/ontology/5.0.0/organ_ontology",
+          "text": "brain"
+        },
+        "organ_part": {
+          "describedBy": "https://schema.humancellatlas.org/module/ontology/5.0.0/organ_part_ontology",
+          "text": "astrocyte"
+        },
+        "disease": [
+          {
+            "describedBy": "https://schema.humancellatlas.org/module/ontology/5.0.0/disease_ontology",
+            "text": "glioblastoma"
+          }
+        ]
+      },
+      "hca_ingest": {
+        "describedBy": "https://schema.humancellatlas.org/bundle/5.0.0/ingest_audit",
+        "document_id": "978a18dc-c550-4e69-9cbf-dadfe6edd5c8",
+        "submissionDate": "2018-02-07T10:21:43.228Z",
+        "updateDate": "2018-02-07T10:21:54.398Z",
+        "submitter_id": "anonymousUser",
+        "updater_id": "anonymousUser"
+      }
+    }
+  ]
 }
