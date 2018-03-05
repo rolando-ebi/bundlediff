@@ -1,0 +1,81 @@
+{
+    "core": {
+        "type": "sample_bundle", 
+        "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample_bundle.json", 
+        "schema_version": "4.6.1"
+    }, 
+    "samples": [
+        {
+            "content": {
+                "core": {
+                    "type": "sample", 
+                    "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample.json", 
+                    "schema_version": "4.6.1"
+                }, 
+                "name": "Q4_DEMO-Single cell mRNA-seq_MGH30_A01", 
+                "specimen_from_organism": {
+                    "body_part": {
+                        "text": "glioblastoma"
+                    }, 
+                    "organ": {
+                        "text": "brain"
+                    }
+                }, 
+                "ncbi_taxon_id": 9606, 
+                "derived_from": "Q4_DEMO-donor_MGH30", 
+                "sample_id": "Q4_DEMO-sample_SAMN02797092"
+            }, 
+            "derivation_protocols": [
+                {
+                    "pdf": "Q4_DEMO-protocol.pdf", 
+                    "protocol_id": "Q4_DEMO-protocol", 
+                    "type": {
+                        "text": "single cell sequencing"
+                    }, 
+                    "core": {
+                        "type": "protocol", 
+                        "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/protocol.json", 
+                        "schema_version": "4.6.1"
+                    }
+                }
+            ], 
+            "hca_ingest": {
+                "accession": "", 
+                "submissionDate": "2018-03-02T04:26:11.121Z", 
+                "lastModifiedUser": "anonymousUser", 
+                "updateDate": "2018-03-02T04:26:21.633Z", 
+                "document_id": "dcb345ae-e42f-4586-9a52-13b103a06362", 
+                "user": "anonymousUser"
+            }, 
+            "derived_from": "a68c09af-7b19-4fac-a27a-e03411e87bd3"
+        }, 
+        {
+            "content": {
+                "core": {
+                    "type": "sample", 
+                    "schema_url": "https://raw.githubusercontent.com/HumanCellAtlas/metadata-schema/4.6.1/json_schema/sample.json", 
+                    "schema_version": "4.6.1"
+                }, 
+                "name": "Q4 DEMO donor MGH30", 
+                "genus_species": {
+                    "text": "Homo sapiens", 
+                    "ontology": "NCBITaxon:9606"
+                }, 
+                "ncbi_taxon_id": 9606, 
+                "sample_id": "Q4_DEMO-donor_MGH30", 
+                "donor": {
+                    "is_living": true
+                }
+            }, 
+            "derivation_protocols": [], 
+            "hca_ingest": {
+                "accession": "", 
+                "submissionDate": "2018-03-02T04:26:11.095Z", 
+                "lastModifiedUser": "anonymousUser", 
+                "updateDate": "2018-03-02T04:26:21.633Z", 
+                "document_id": "a68c09af-7b19-4fac-a27a-e03411e87bd3", 
+                "user": "anonymousUser"
+            }
+        }
+    ]
+}
